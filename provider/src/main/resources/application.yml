@@ -1,0 +1,17 @@
+#指定服务端口
+server:
+  port: 8081
+#配置dubbo
+dubbo:
+  application: #定义应用名
+    name: provider
+  registry: #配置zookeeper注册中心
+    address: zookeeper://127.0.0.1
+    port: 2181
+  protocol: #配置协议
+    name: dubbo
+    port: 20880
+    host: 127.0.0.1
+  scan:
+    base-packages: com.example.provider.serviceImpl #配置包扫描
+
